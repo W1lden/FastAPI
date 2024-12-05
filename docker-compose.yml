@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  fastapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - OPENWEATHER_API_KEY="3553a42aeaab2febfefd2e456e7304c3"
